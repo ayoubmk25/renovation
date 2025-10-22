@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { Mail, Phone, MapPin, Globe, User } from "lucide-react"
+import { Mail, Phone, MapPin, Globe } from "lucide-react"
 
 export function ModernFooter() {
   return (
@@ -22,29 +22,36 @@ export function ModernFooter() {
             <div className="flex flex-col items-center justify-center text-center lg:text-left space-y-6 lg:space-y-8">
               {/* Logo */}
               <div className="relative flex flex-col items-center space-y-4">
-                <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 relative flex items-center justify-center">
+                <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 relative flex items-center justify-center">
                   {/* Enhanced logo with 3D effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-full blur-xl" />
 
-                  <svg width="120" height="120" viewBox="0 0 160 160" className="relative w-full h-full">
-                    {/* Building with enhanced shadows */}
-                    <defs>
-                      <linearGradient id="buildingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#0891b2" />
-                        <stop offset="100%" stopColor="#0e7490" />
-                      </linearGradient>
-                    </defs>
+            <svg
+  width="300"
+  height="300"
+  viewBox="0 0 300 300"
+  className="relative w-full h-full"
+>
+  {/* Building with enhanced shadows */}
+  <defs>
+    <linearGradient id="buildingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0891b2" />
+      <stop offset="100%" stopColor="#0e7490" />
+    </linearGradient>
+  </defs>
 
-                    <rect x="25" y="75" width="110" height="55" fill="url(#buildingGrad)" rx="2"/>
-                    <polygon points="20,75 50,40 80,75" fill="url(#buildingGrad)"/>
-                    <polygon points="70,75 100,40 130,75" fill="url(#buildingGrad)"/>
+  {/* Building body */}
+  <rect x="50" y="150" width="200" height="100" fill="url(#buildingGrad)" rx="4" />
+  <polygon points="40,150 95,80 150,150" fill="url(#buildingGrad)" />
+  <polygon points="130,150 185,80 240,150" fill="url(#buildingGrad)" />
 
-                    {/* Windows with glow */}
-                    <rect x="40" y="90" width="14" height="38" fill="#38bdf8" rx="2"/>
-                    <rect x="60" y="85" width="12" height="12" fill="#38bdf8" rx="2"/>
-                    <rect x="80" y="85" width="12" height="12" fill="#38bdf8" rx="2"/>
-                    <rect x="100" y="90" width="14" height="38" fill="#38bdf8" rx="2"/>
-                  </svg>
+  {/* Windows with glow */}
+  <rect x="80" y="180" width="26" height="70" fill="#38bdf8" rx="3" />
+  <rect x="115" y="170" width="22" height="22" fill="#38bdf8" rx="3" />
+  <rect x="145" y="170" width="22" height="22" fill="#38bdf8" rx="3" />
+  <rect x="180" y="180" width="26" height="70" fill="#38bdf8" rx="3" />
+</svg>
+
 
                   {/* Animated tools */}
                   <div className="absolute top-2 left-4 sm:top-4 sm:left-8 animate-pulse">
@@ -65,13 +72,8 @@ export function ModernFooter() {
             <div className="flex flex-col justify-center space-y-4 sm:space-y-6">
               {/* Name and title */}
               <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-3 sm:space-y-0 sm:space-x-5 group text-center sm:text-left">
-                <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                  <User className="h-5 w-5 sm:h-7 sm:w-7 text-white" />
-                </div>
-                <div>
-                  <h2 className="font-black text-xl sm:text-2xl lg:text-3xl text-white leading-tight">MKHININI SOUHEIL</h2>
-                  <p className="text-cyan-200 text-sm sm:text-base lg:text-lg italic">Directeur général</p>
-                </div>
+              
+               
               </div>
 
               {/* Contact items */}

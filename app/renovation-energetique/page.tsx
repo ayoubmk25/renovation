@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState, useEffect, useRef } from "react"
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -86,7 +87,9 @@ export default function RenovationEnergetiquePage() {
             </h1>
             <p className="text-xl text-gray-300 mb-8">Réduisez vos factures d'énergie et augmentez le confort de votre habitat</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white">Demander un audit</Button>
+              <Button size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white">
+                <Link href="/devis-travaux" className="flex items-center">Demander un audit</Link>
+              </Button>
               <Button size="lg" variant="outline" className="border-white/20 ">Découvrir les aides</Button>
             </div>
           </div>
@@ -178,11 +181,13 @@ export default function RenovationEnergetiquePage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-primary text-white text-center">
+        <section className="py-20 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Prêt à améliorer votre confort énergétique ?</h2>
           <p className="text-xl mb-8 text-white/90">Contactez-nous pour un audit gratuit</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary">Demander un audit gratuit</Button>
+            <Button size="lg" variant="secondary">
+              <Link href="/devis-travaux" className="flex items-center">Demander un audit gratuit</Link>
+            </Button>
             <Button size="lg" variant="outline" className="border-white text-black">06.10.17.11.05</Button>
           </div>
         </section>

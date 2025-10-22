@@ -53,7 +53,7 @@ export default function ExpertisesPage() {
   const certifications = ["RGE Qualibat", "Artisan certifié", "Assurance décennale", "Qualité Pro", "Eco Artisan"]
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden text-white">
       {/* Unified Background System */}
       <div className="fixed inset-0 -z-20">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900" />
@@ -193,7 +193,7 @@ export default function ExpertisesPage() {
 
             <div className="bg-primary/5 rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-4">Prêt à démarrer votre projet ?</h3>
-              <p className="text-muted-foreground mb-6">Contactez-nous pour un devis gratuit et personnalisé</p>
+              <p className="text-muted-foreground mb-6 text-white">Contactez-nous pour un devis gratuit et personnalisé</p>
               <Link href="/contact">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
                   Demander un devis gratuit

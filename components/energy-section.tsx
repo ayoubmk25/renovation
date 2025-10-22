@@ -38,7 +38,7 @@ export function EnergySection() {
             className="relative"
           >
             <img
-              src="/energy-efficiency-rating-chart-green-building.jpg"
+              src="/enr.png"
               alt="Efficacité énergétique"
               className="w-full h-auto rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-500"
             />

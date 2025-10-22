@@ -7,15 +7,15 @@ import { motion } from "framer-motion"
 const features = [
   {
     icon: Home,
-    title: "Idéal pour vous réconcilier avec les travaux !",
+    title: "Un accompagnement serein pour vos travaux",
     description:
-      "Une seule personne à contacter et tout se passe bien. Fini les galères avec les artisans !",
+      "Un seul interlocuteur du début à la fin : simplicité, clarté et sérénité. Fini les imprévus et les pertes de temps !",
   },
   {
     icon: Zap,
-    title: "La performance énergétique au cœur du projet",
+    title: "La performance énergétique au cœur de chaque projet",
     description:
-      "Améliorations et rénovations de votre logement en fonction de vos besoins.",
+      "Nous optimisons le confort et les consommations de votre logement à chaque étape de la rénovation.",
   },
 ]
 
@@ -56,7 +56,7 @@ export function FeaturesSection() {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              ref={(el) => (itemRefs.current[index] = el)}
+              ref={(el) => {itemRefs.current[index] = el}}
               initial={{ opacity: 0, y: 30 }}
               animate={visibleItems[index] ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.2, duration: 0.7 }}

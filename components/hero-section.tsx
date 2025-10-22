@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Star, Phone } from "lucide-react"
 import { Hero3DScene } from "./Hero3DScene"
 import { RobotSpline } from "./RobotSpline"
+import Link from "next/link"
 import TextType from "./TextType"
 
 export function ModernHeroSection() {
@@ -52,7 +53,12 @@ export function ModernHeroSection() {
 
       {/* SVG Wave Separator at the bottom */}
       <div className="absolute bottom-0 left-0 w-full h-auto overflow-hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="block w-full h-auto fill-current" style={{ fill: "#0099ff", fillOpacity: "1" }}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          className="block w-full h-auto fill-current"
+          style={{ fill: "#0099ff", fillOpacity: "1" }}
+        >
           <path d="M0,256L48,224C96,192,192,128,288,85.3C384,43,480,21,576,42.7C672,64,768,128,864,176C960,224,1056,256,1152,250.7C1248,245,1344,203,1392,181.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
       </div>
@@ -79,7 +85,6 @@ export function ModernHeroSection() {
                     pauseDuration={1500}
                     showCursor={true}
                     cursorCharacter="|"
-                    className=""
                   />
                 </span>
               </h1>
@@ -90,23 +95,29 @@ export function ModernHeroSection() {
               </p>
             </div>
 
+            {/* ✅ Updated Buttons with Links */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
-                style={{ cursor: "url('http://www.rw-designer.com/cursor-extern.php?id=231129'), auto" }}
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Devis Gratuit 24h
-              </Button>
+              {/* Devis Gratuit → /devis-travaux */}
+              <Link href="/devis-travaux">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Devis Gratuit 24h
+                </Button>
+              </Link>
 
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-white/30 hover:bg-white hover:text-slate-900 backdrop-blur-sm px-8 py-4 rounded-xl transition-all duration-300"
-              >
-                Nos Réalisations
-              </Button>
+              {/* Nos Réalisations → /realisations */}
+              <Link href="/realisations">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-white/30 hover:bg-white hover:text-slate-900 backdrop-blur-sm px-8 py-4 rounded-xl transition-all duration-300"
+                >
+                  Nos réalisations
+                </Button>
+              </Link>
             </div>
 
             {/* Trust indicators */}

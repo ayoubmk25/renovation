@@ -112,7 +112,7 @@ export default function DevisTravauxPage() {
   ]
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden text-white">
       {/* Background */}
       <div className="fixed inset-0 -z-20">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900" />
@@ -147,15 +147,15 @@ export default function DevisTravauxPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="animate-fade-in-up">
-              <Badge variant="outline" className="mb-4">
-                <Calculator className="h-4 w-4 mr-2" />
+            <div className="animate-fade-in-up text-white">
+              <Badge variant="outline" className="mb-4 text-white">
+                <Calculator className="h-7 w-8 mr-2" />
                 Devis travaux
               </Badge>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
                 Demandez votre <span className="text-primary">devis gratuit</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 text-pretty">
+              <p className="text-xl text-muted-foreground mb-8 text-pretty text-white">
                 Obtenez une estimation précise et personnalisée pour vos travaux de rénovation en moins de 48 heures.
               </p>
             </div>
@@ -170,7 +170,7 @@ export default function DevisTravauxPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Comment ça <span className="text-primary">fonctionne</span> ?
             </h2>
-            <p className="text-lg text-muted-foreground">Un processus simple et transparent pour votre devis</p>
+            <p className="text-lg text-muted-foreground text-white">Un processus simple et transparent pour votre devis</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
@@ -184,7 +184,7 @@ export default function DevisTravauxPage() {
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground">{step.desc}</p>
+                <p className="text-muted-foreground text-white">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -329,15 +329,15 @@ export default function DevisTravauxPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Besoin d'aide pour remplir le formulaire ?</h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-8 text-white">
               Contactez-nous directement, nous vous aiderons à définir votre projet
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline">
-                <Phone className="h-5 w-5 mr-2" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center ">
+              <Button size="lg" variant="outline" className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
+                <Phone className="h-5 w-5 mr-2"  />
                 06.10.17.11.05
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white">
                 <Mail className="h-5 w-5 mr-2" />
                 sfs.78@outlook.fr
               </Button>

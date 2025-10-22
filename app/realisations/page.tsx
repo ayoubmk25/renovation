@@ -30,9 +30,9 @@ export default function RealisationsPage() {
       location: "Paris 16ème",
       type: "Rénovation Complète",
       duration: "3 mois",
-      image: "/renovated-haussmann-apartment-interior.jpg",
+      image: "/haussmann-apartment-renovation-paris-luxury-interi.jpg",
       description: "Rénovation complète d'un appartement de 120m² avec conservation des éléments d'époque.",
-      slug: generateSlug("Rénovation Appartement Haussmannien"),
+      slug: generateSlug("Renovation Appartement Haussmannien"),
     },
     {
       title: "Maison Contemporaine",

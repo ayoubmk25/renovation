@@ -32,7 +32,7 @@ const projectsData: Project[] = [
     location: "Paris 16ème",
     type: "Rénovation Complète",
     duration: "3 mois",
-    image: "/renovated-haussmann-apartment-interior.jpg",
+    image: "/haussmann-apartment-renovation-paris-luxury-interi.jpg",
     description: "Rénovation complète d'un appartement de 120m² avec conservation des éléments d'époque.",
     slug: "renovation-appartement-complet-paris-75016",
     details: {
@@ -47,9 +47,9 @@ const projectsData: Project[] = [
       "Mise aux normes électriques"
     ],
     gallery: [
-      "/renovated-haussmann-apartment-interior.jpg",
-      "/renovated-haussmann-apartment-interior.jpg",
-      "/renovated-haussmann-apartment-interior.jpg"
+      "/realisations/apartment-renovation-1/image-1.jpg",
+      "/realisations/apartment-renovation-1/image-2.jpg",
+      "/realisations/apartment-renovation-1/image-3.jpg"
     ]
   },
   {
@@ -72,9 +72,9 @@ const projectsData: Project[] = [
       "Panneaux solaires photovoltaïques"
     ],
     gallery: [
-      "/modern-house-energy-renovation.jpg",
-      "/modern-house-energy-renovation.jpg",
-      "/modern-house-energy-renovation.jpg"
+      "/realisations/house-renovation-1/image-1.jpg",
+      "/realisations/house-renovation-1/image-2.jpg",
+      "/realisations/house-renovation-1/image-3.jpg"
     ]
   },
   {
@@ -97,9 +97,9 @@ const projectsData: Project[] = [
       "Verrière d'intérieur"
     ],
     gallery: [
-      "/industrial-loft-renovation.jpg",
-      "/industrial-loft-renovation.jpg",
-      "/industrial-loft-renovation.jpg"
+      "/realisations/energy-renovation-1/image-1.jpg",
+      "/realisations/energy-renovation-1/image-2.jpg",
+      "/realisations/energy-renovation-1/image-3.jpg"
     ]
   },
   {
@@ -122,9 +122,9 @@ const projectsData: Project[] = [
       "Réaménagement des espaces"
     ],
     gallery: [
-      "/family-house-extension-renovation.jpg",
-      "/family-house-extension-renovation.jpg",
-      "/family-house-extension-renovation.jpg"
+      "/realisations/house-renovation-1/image-1.jpg",
+      "/realisations/house-renovation-1/image-2.jpg",
+      "/realisations/house-renovation-1/image-3.jpg"
     ]
   },
   {
@@ -147,9 +147,9 @@ const projectsData: Project[] = [
       "Acoustique optimisée"
     ],
     gallery: [
-      "/modern-office-renovation.jpg",
-      "/modern-office-renovation.jpg",
-      "/modern-office-renovation.jpg"
+      "/realisations/apartment-renovation-1/image-1.jpg",
+      "/realisations/apartment-renovation-1/image-2.jpg",
+      "/realisations/apartment-renovation-1/image-3.jpg"
     ]
   },
   {
@@ -172,9 +172,9 @@ const projectsData: Project[] = [
       "Domotique complète"
     ],
     gallery: [
-      "/modern-duplex-apartment-renovation.jpg",
-      "/modern-duplex-apartment-renovation.jpg",
-      "/modern-duplex-apartment-renovation.jpg"
+      "/realisations/bathroom-renovation-1/image-1.jpg",
+      "/realisations/bathroom-renovation-1/image-2.jpg",
+      "/realisations/bathroom-renovation-1/image-3.jpg"
     ]
   },
   {
@@ -197,9 +197,9 @@ const projectsData: Project[] = [
       "Garanties décennales"
     ],
     gallery: [
-      "/placeholder.jpg",
-      "/placeholder.jpg",
-      "/placeholder.jpg"
+      "/realisations/energy-renovation-1/image-1.jpg",
+      "/realisations/energy-renovation-1/image-2.jpg",
+      "/realisations/energy-renovation-1/image-3.jpg"
     ]
   },
 ]
@@ -317,13 +317,15 @@ export default function ProjectDetailPage() {
               <h3 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">Galerie photos</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 {project.gallery.map((img, index) => (
-                  <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <img
-                      src={img}
-                      alt={`${project.title} - Photo ${index + 1}`}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
+                  <Link key={index} href={img} target="_blank" rel="noopener noreferrer">
+                    <div className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+                      <img
+                        src={img}
+                        alt={`${project.title} - Photo ${index + 1}`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -339,7 +341,7 @@ export default function ProjectDetailPage() {
                   </Button>
                 </Link>
                 <Link href="/realisations">
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-full transition-all duration-300">
+                  <Button size="lg" variant="outline" className="border-2 border-white text-blue-600 px-8 py-6 text-lg rounded-full transition-all duration-300">
                     Voir tous nos projets
                   </Button>
                 </Link>
