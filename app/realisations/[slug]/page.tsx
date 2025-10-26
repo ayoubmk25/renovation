@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { useParams } from "next/navigation"
 
 interface Project {
   title: string
@@ -326,13 +327,12 @@ const projectsData: Project[] = [
 ]
 
 export default function ProjectDetailPage() {
+  const params = useParams()
+  const slug = params?.slug as string || 'renovation-appartement-haussmannien'
+  
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
-  
-  // Get slug from URL - in real Next.js app, use useParams from next/navigation
-  // For demo, we'll use the first project
-  const slug = typeof window !== 'undefined' ? window.location.pathname.split('/').pop() : 'renovation-appartement-haussmannien'
   
   const project = projectsData.find(p => p.slug === slug) || projectsData[0]
 
