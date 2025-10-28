@@ -250,7 +250,7 @@ export default function AboutPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <a
-                    href="tel:0610171105"
+                    href="tel:330610171105"
                     className="group relative bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
                   >
                     <span className="relative z-10">Appelez maintenant</span>

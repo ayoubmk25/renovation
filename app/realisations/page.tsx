@@ -240,7 +240,7 @@ export default function RealisationsPage() {
             >
               <div className="inline-block">
                 <Badge className="px-6 py-2 text-sm font-semibold bg-gradient-to-r from-sky-500 to-cyan-500 border-0 text-white shadow-lg shadow-sky-500/50 animate-pulse">
-                  Portfolio 2024
+                  Portfolio
                 </Badge>
               </div>
               

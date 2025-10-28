@@ -96,7 +96,7 @@ export default function QuiSommesNousPage() {
   const stats = [
     { number: 7, suffix: "+", label: "Années d'expérience" },
     { number: 3700, suffix: "+", label: "Projets réalisés" },
-    { number: 98, suffix: "%", label: "Clients satisfaits" },
+    { number: 94, suffix: "%", label: "de nos clients nous recommandent" },
     { number: 25, suffix: "", label: "Artisans qualifiés" },
   ]
 

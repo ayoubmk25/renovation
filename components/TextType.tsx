@@ -23,6 +23,7 @@ export default function TextType({
   const [displayedText, setDisplayedText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
   const [showCursorBlink, setShowCursorBlink] = useState(true);
+  const [finished, setFinished] = useState(false);
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
@@ -34,10 +35,9 @@ export default function TextType({
           setDisplayedText(prev => prev + text[currentTextIndex][displayedText.length]);
         }, typingSpeed);
       } else {
-        // Finished typing, pause then start deleting
-        timeout = setTimeout(() => {
-          setIsTyping(false);
-        }, pauseDuration);
+        // Finished typing, set finished so it doesn't delete
+        setFinished(true);
+        setIsTyping(false);
       }
     } else {
       // Deleting effect
@@ -68,7 +68,7 @@ export default function TextType({
   }, [showCursor]);
 
   return (
-    <span className={className}>
+    <span className={className} style={{ minWidth: '17rem', display: 'inline-block' }}>
       {displayedText}
       {showCursor && showCursorBlink && <span>{cursorCharacter}</span>}
     </span>
